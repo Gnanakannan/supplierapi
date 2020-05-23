@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<form action="/">
+  <input type="text" name="s" placeholder="Search...">
+  <input type="button" value="Search" id="searchForm" onclick="callme()">
+</form>    
+</div>
+
+
+<script type="application/javascript">
+
+//$(document).ready(function() {
+//$( "#searchForm" ).onclick(function( event ) {
+
+function callme() {
+
+var settings = {
+  "url": "http://localhost:5000/StoreUser/Authenticate",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json",
+  },
+  "data": JSON.stringify({"Username":"test","Password":"test"}),
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+/* 
+    $.ajax({
+        type: "POST",
+        url: 'http://localhost:5000/StoreUser/Authenticate',
+        data: data,
+        success: success,
+        dataType: dataType
+    }); */
+}
+//});
+
+</script>
