@@ -8190,11 +8190,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\src\\supplierapi2\\supplierapi.csproj",
+      "projectUniqueName": "C:\\src\\supplierapi\\supplierapi.csproj",
       "projectName": "supplierapi",
-      "projectPath": "c:\\src\\supplierapi2\\supplierapi.csproj",
+      "projectPath": "C:\\src\\supplierapi\\supplierapi.csproj",
       "packagesPath": "C:\\Users\\gnana\\.nuget\\packages\\",
-      "outputPath": "c:\\src\\supplierapi2\\obj\\",
+      "outputPath": "C:\\src\\supplierapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gnana\\AppData\\Roaming\\NuGet\\NuGet.Config"

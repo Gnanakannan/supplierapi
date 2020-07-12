@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\supplierapi2\\supplierapi.csproj": {}
+    "C:\\src\\supplierapi\\supplierapi.csproj": {}
   },
   "projects": {
-    "C:\\src\\supplierapi2\\supplierapi.csproj": {
+    "C:\\src\\supplierapi\\supplierapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\supplierapi2\\supplierapi.csproj",
+        "projectUniqueName": "C:\\src\\supplierapi\\supplierapi.csproj",
         "projectName": "supplierapi",
-        "projectPath": "C:\\src\\supplierapi2\\supplierapi.csproj",
+        "projectPath": "C:\\src\\supplierapi\\supplierapi.csproj",
         "packagesPath": "C:\\Users\\gnana\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\supplierapi2\\obj\\",
+        "outputPath": "C:\\src\\supplierapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gnana\\AppData\\Roaming\\NuGet\\NuGet.Config"
