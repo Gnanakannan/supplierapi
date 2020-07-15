@@ -41,6 +41,8 @@ namespace supplierapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
             services.AddCors();
             services.AddControllers();
 
@@ -113,6 +115,16 @@ namespace supplierapi
 
 
             // requires using Microsoft.Extensions.Options
+            //Product Collection
+            services.Configure<ProductDatabaseSettings>(
+                Configuration.GetSection(nameof(ProductDatabaseSettings)));
+
+            services.AddSingleton<IProductDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<ProductDatabaseSettings>>().Value);
+
+            services.AddSingleton<ProductService>();
+
+
             //Books Collection
             services.Configure<BookstoreDatabaseSettings>(
                 Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
@@ -132,13 +144,23 @@ namespace supplierapi
             services.AddSingleton<StoreService>();
 
             //Store user Collection
-            services.Configure<IStoreUsersDatabaseSettings>(
+            services.Configure<StoreUsersDatabaseSettings>(
                 Configuration.GetSection(nameof(StoreUsersDatabaseSettings)));
 
             services.AddSingleton<IStoreUsersDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<StoreUsersDatabaseSettings>>().Value);
 
             services.AddSingleton<StoreUserService>();
+
+
+            //Order Collection
+            services.Configure<OrderDatabaseSettings>(
+                Configuration.GetSection(nameof(OrderDatabaseSettings)));
+
+            services.AddSingleton<IOrderDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<OrderDatabaseSettings>>().Value);
+
+            services.AddSingleton<OrderService>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
