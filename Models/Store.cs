@@ -18,13 +18,15 @@ namespace supplierapi
         public List<StoreProduct> storeProducts { get; set; }
     }
 
-    public class StoreProfile {
+    public class StoreProfile
+    {
         [BsonElement("name")]
         public string name { get; set; }
     }
 
 
-    public class StoreProduct {
+    public class StoreProduct
+    {
         [BsonElement("productCode")]
         public string productCode { get; set; }
 
@@ -36,26 +38,51 @@ namespace supplierapi
 
         [BsonElement("nameEn")]
         public string nameEn { get; set; }
-        
+
         [BsonElement("quantityMetric")]
         public string quantityMetric { get; set; }
-        
+
         [BsonElement("quantityMetricEn")]
         public string quantityMetricEn { get; set; }
-        
+
         [BsonElement("quantitySecondMetric")]
         public string quantitySecondMetric { get; set; }
 
         [BsonElement("quantityMeasure")]
-        public string quantityMeasure { get; set; }
+        public double quantityMeasure { get; set; }
 
-        [BsonElement("quantityMeasureEn")]
-        public string quantityMeasureEn { get; set; }
+        // [BsonElement("quantityMeasureEn")]
+        // public string quantityMeasureEn { get; set; }
+
+        [BsonElement("minQuantity")]
+        public double minQuantity { get; set; }
+
+        [BsonElement("maxQuantity")]
+        public double maxQuantity { get; set; }
 
         [BsonElement("productPrice")]
-        public string productPrice { get; set; }
+        public double productPrice { get; set; }
 
         [BsonElement("priceCurrency")]
         public string priceCurrency { get; set; }
+
+        [BsonElement("availablePacks")]
+        public List<AvailablePack> availablePacks { get; set; }
+
+    }
+
+    public class AvailablePack
+    {
+        [BsonElement("measureName")]
+        public string measureName { get; set; }
+
+        [BsonElement("measureName")]
+        public string measureNameEn { get; set; }
+
+        [BsonElement("measureQuantity")]
+        public double measureQuantity { get; set; }
+
+        [BsonElement("price")]
+        public double price { get; set; }
     }
 }
