@@ -14,32 +14,45 @@ namespace supplierapi
         [BsonElement("orderNumber")]
         public String orderNumber { get; set; }
 
+        [BsonElement("storeId")]
+        public String storeId { get; set; }        
+
+        [BsonElement("shopper")]
+        public Shopper shopper { get; set; }
+
+        [BsonElement("deliveryAddress")]
+        public ShopperAddress deliveryAddress { get; set; }
 
         [BsonElement("queueNumber")]
         public int queueNumber { get; set; }
 
 
-        [BsonElement("orderStatus")]
-        public String orderStatus { get; set; }
-
-
-        [BsonElement("productItems")]
-        public List<ShopProduct> productItems { get; set; }
+        [BsonElement("status")]
+        public String status { get; set; }
 
 
         [BsonElement("orderDateTime")]
         public DateTime orderDateTime { get; set; }
 
 
+        [BsonElement("requestedDeliveryDate")]
+        public DateTime requestedDeliveryDate { get; set; }
+
+
+        [BsonElement("actualDeliveryDate")]
+        public DateTime actualDeliveryDate { get; set; }
+
+
         [BsonElement("totalPrice")]
         public double totalPrice { get; set; }
 
 
-        [BsonElement("orderCustomerID")]
-        public String orderCustomerID { get; set; }
-
-
         [BsonElement("orderType")]
         public String orderType { get; set; }
+
+
+        [BsonElement("products")]
+        public List<CartProduct> products { get; set; }
+
     }
 }
